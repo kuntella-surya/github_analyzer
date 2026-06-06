@@ -1,64 +1,67 @@
-# github_analyzer
 # 🚀 GitHub Profile Analyzer API
 
 ## 📌 Overview
-GitHub Profile Analyzer API is a backend system built using Node.js, Express.js, and MySQL that analyzes GitHub user profiles using the GitHub Public API and stores meaningful insights in a database.
+GitHub Profile Analyzer API is a backend system built using **Node.js**, **Express.js**, and **MySQL** that analyzes GitHub user profiles using the GitHub Public API and stores meaningful insights in a database.
 
 It extracts developer analytics such as followers, repositories, stars, language distribution, and activity score, then provides REST APIs to access this data.
 
 ---
 
 ## 🛠 Tech Stack
-- Node.js
-- Express.js
-- MySQL
-- Axios
-- GitHub REST API
+- Node.js  
+- Express.js  
+- MySQL  
+- Axios  
+- GitHub REST API  
 
 ---
 
 ## ✨ Features
 
 ### 🔹 Core Features
-- Fetch GitHub user data using username
-- Fetch user repositories from GitHub API
-- Analyze developer statistics
-- Store analyzed data in MySQL database
-- Retrieve all stored analyzed profiles
-- Retrieve single profile by username
+- Fetch GitHub user data using username  
+- Fetch user repositories from GitHub API  
+- Analyze developer statistics  
+- Store analyzed data in MySQL database  
+- Retrieve all stored analyzed profiles  
+- Retrieve single profile by username  
 
-### 🔹 Advanced Features (Extra / Added for Enhancement)
+---
 
-#### ⚡ Cache System
-- Checks database before calling GitHub API
-- Avoids unnecessary API requests
-- Improves performance
+### ⚡ Advanced Features
+
+#### 📌 Cache System
+- Checks database before calling GitHub API  
+- Avoids unnecessary API requests  
+- Improves performance  
 
 #### 📊 Language Analysis
-- Calculates programming language usage from repositories
-- Returns language dominance in percentage format
+- Calculates programming language usage from repositories  
+- Returns language dominance in percentage format  
 
 #### 🔥 Activity Score System
 - Calculates developer score based on:
-  - Followers
-  - Public repositories
-  - Total stars
+  - Followers  
+  - Public repositories  
+  - Total stars  
+
 - Classifies activity level:
-  - 🔥 High Activity
-  - ⚡ Medium Activity
-  - 💤 Low Activity
+  - 🔥 High Activity  
+  - ⚡ Medium Activity  
+  - 💤 Low Activity  
 
 #### 🧠 Developer Insights
-- Identifies top programming language
-- Generates structured developer profile analytics
+- Identifies top programming language  
+- Generates structured developer profile analytics  
 
 ---
 
 ## 📡 API Endpoints
 
 ### 1. Analyze GitHub Profile (Create / Update)
-Analyze a GitHub user and store results in database.
+
 POST /api/analyze/:username
+
 
 Example:
 
@@ -66,13 +69,17 @@ POST /api/analyze/torvalds
 
 
 ---
+
 ### 2. Get All Profiles
-Fetch all stored analyzed GitHub profiles.
+
 GET /api/profiles
+
+
 ---
 
 ### 3. Get Single Profile
-Fetch stored analysis of a specific user. GET /api/profiles/:username
+
+GET /api/profiles/:username
 
 
 Example:
@@ -101,16 +108,13 @@ CREATE TABLE github_profiles (
   created_at VARCHAR(50),
   saved_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-##⚙️ Setup Instructions
+⚙️ Setup Instructions
 1. Clone Repository
 git clone https://github.com/kuntella-surya/github_analyzer
 cd github-profile-analyzer
 2. Install Dependencies
 npm install
-3. Create Environment Variables
-
-##Create a .env file in root directory:
-
+3. Create .env File
 PORT=5000
 
 DB_HOST=localhost
@@ -118,12 +122,13 @@ DB_USER=root
 DB_PASSWORD=yourpassword
 DB_NAME=github_analyzer
 4. Start Server
-node app.js /nodemon app.js
+node app.js
+# or
+nodemon app.js
 🧪 Testing the API
 
-## Use Postman or any API client.
-
 Example Request:
+
 POST http://localhost:5000/api/analyze/torvalds
 📊 Sample Response
 {
