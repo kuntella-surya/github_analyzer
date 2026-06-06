@@ -108,15 +108,10 @@ CREATE TABLE github_profiles (
   created_at VARCHAR(50),
   saved_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
----
-
-## ⚙️ Setup Instructions
-
-### 📥 1. Clone Repository
-```bash
+⚙️ Setup Instructions
+1. Clone Repository
 git clone https://github.com/kuntella-surya/github_analyzer
 cd github-profile-analyzer
-
 2. Install Dependencies
 npm install
 3. Create .env File
@@ -128,11 +123,11 @@ DB_PASSWORD=yourpassword
 DB_NAME=github_analyzer
 4. Start Server
 node app.js
-# or
+# OR
 nodemon app.js
 🧪 Testing the API
 
-Example Request:
+Example request:
 
 POST http://localhost:5000/api/analyze/torvalds
 📊 Sample Response
