@@ -108,10 +108,15 @@ CREATE TABLE github_profiles (
   created_at VARCHAR(50),
   saved_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-⚙️ Setup Instructions
-1. Clone Repository
+---
+
+## ⚙️ Setup Instructions
+
+### 📥 1. Clone Repository
+```bash
 git clone https://github.com/kuntella-surya/github_analyzer
 cd github-profile-analyzer
+
 2. Install Dependencies
 npm install
 3. Create .env File
