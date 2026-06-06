@@ -1,4 +1,4 @@
-import { db } from "../config/db.js";
+import { db } from "../config/Db.js";
 export const getAllProfiles = (req, res) => {
   const sql = "SELECT * FROM github_profiles";
 

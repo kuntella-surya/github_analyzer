@@ -2,8 +2,8 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import profileRoutes from "./routes/profileRoutes.js";
-import { getUserData, getUserRepos } from "./services/githubservice.js";
-import { db } from "./config/db.js";
+import { getUserData, getUserRepos } from "./services/githubService.js";
+import { db } from "./config/Db.js";
 dotenv.config();
 
 const app = express();

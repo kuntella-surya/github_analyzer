@@ -1,5 +1,5 @@
 import {analyzeProfile} from "../controllers/analyzeprofile.js";
-import {getAllProfiles,getProfileByUsername} from "../controllers/getprofile.js";
+import {getAllProfiles,getProfileByUsername} from "../controllers/getProfile.js";
 import express from "express";
 const router = express.Router();
 router.post("/analyze/:username", analyzeProfile);

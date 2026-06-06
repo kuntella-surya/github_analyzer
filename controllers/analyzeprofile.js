@@ -1,17 +1,20 @@
 import { getUserData, getUserRepos } from "../services/githubService.js";
-import { db } from "../config/db.js";
+import { db } from "../config/Db.js";
 
 export const analyzeProfile = async (req, res) => {
   const { username } = req.params;
-
+ // console.log("DB NAME:", process.env.DB_NAME);
   try {
     
     const checkSql = "SELECT * FROM github_profiles WHERE username = ?";
 
-    db.query(checkSql, [username], async (err, results) => {
-      if (err) {
-        return res.status(500).json({ error: err.message });
-      }
+console.log("Executing SQL:", checkSql);
+console.log("Username:", username);
+   db.query(checkSql, [username], async (err, results) => {
+  if (err) {
+    //console.log("❌ SQL ERROR FULL:", err);
+    return res.status(500).json({ error: err.message });
+  }
 
       // CACHE HIT
       if (results.length > 0) {
