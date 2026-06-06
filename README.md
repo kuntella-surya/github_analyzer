@@ -101,7 +101,7 @@ CREATE TABLE github_profiles (
   created_at VARCHAR(50),
   saved_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-⚙️ Setup Instructions
+##⚙️ Setup Instructions
 1. Clone Repository
 git clone https://github.com/kuntella-surya/github_analyzer
 cd github-profile-analyzer
@@ -109,7 +109,7 @@ cd github-profile-analyzer
 npm install
 3. Create Environment Variables
 
-Create a .env file in root directory:
+##Create a .env file in root directory:
 
 PORT=5000
 
@@ -121,7 +121,7 @@ DB_NAME=github_analyzer
 node app.js /nodemon app.js
 🧪 Testing the API
 
-Use Postman or any API client.
+## Use Postman or any API client.
 
 Example Request:
 POST http://localhost:5000/api/analyze/torvalds
